@@ -1,0 +1,581 @@
+@import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap');
+
+.logotext {
+  font-family: 'Black Ops One', cursive;
+}
+
+.ocs {
+  min-height: 960px;
+  background-image: url(/images/landing_page/oclass3.png);
+  background-size: cover;
+  background-position: top center;
+  box-shadow: 0px 20px 20px -10px #f9f9f9 inset;
+  background-attachment: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+.classCard {
+  height: 400px;
+  width: 360px;
+  clip-path: polygon(25% 0, 100% 0, 100% 85%, 75% 100%, 0 100%, 0 15%);
+  background-image: url(/images/landing_page/oclass1.jpg);
+  background-size: cover;
+  border-radius: 3px;
+  transition: 0.8s;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-position: center;
+  font-size: 24px;
+  cursor: pointer;
+}
+.cardshadow {
+  filter: drop-shadow(0px 0px 10px rgba(255, 255, 255, 0.5));
+  transition: 0.8s;
+}
+.cardGroup {
+  display: flex;
+  /* flex-wrap: wrap; */
+  color: #f9f9f9;
+  gap: 36px;
+  width: 100%;
+  padding: 130px 0px;
+  justify-content: center;
+  align-items: center;
+}
+.cardshadow:hover .classCard {
+  background-image: url(/images/landing_page/online-course-card-bg.webp);
+  background-position: right center;
+  color: #140f2a;
+}
+.cardshadow:hover {
+  filter: drop-shadow(-8px -8px 0px rgba(0, 240, 255, 0.75))
+    drop-shadow(8px 8px 0px rgba(255, 0, 184, 0.75));
+}
+
+.onlineCardImg {
+  width: 300px;
+  height: 250px;
+  clip-path: polygon(25% 0, 100% 0, 100% 80%, 75% 100%, 0 100%, 0 20%);
+  background-size: cover;
+  background-position: center;
+  transition: 0.8s;
+}
+.cardshadow:hover .classCard .onlineCardImg {
+  /* background-size: 140%; */
+  background-position: left center;
+  box-shadow: 0px 0px 10px #140f2a inset;
+}
+.os {
+  min-height: 960px;
+  background-image: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0) 70%,
+      rgba(255, 255, 255, 0.5) 100%
+    ),
+    url(/images/landing_page/online-shop2.png);
+  background-size: cover;
+  background-position: center;
+  /* background-attachment: fixed; */
+}
+.ostext {
+  font-size: 56px;
+  text-align: left;
+  margin-top: 156px;
+  color: #f9f9f9;
+}
+.marquee {
+  /* background-color: rgba(255,255,255,0.2); */
+  /* background-image: linear-gradient(to top, rgba(255, 255, 255, 0.4), transparent 70%),
+      linear-gradient(to bottom, rgba(255, 255, 255, 0.5), transparent -70%); */
+
+  overflow: hidden;
+  width: 100%;
+  margin: 0px auto;
+  margin-top: 200px;
+}
+.marqueeContent {
+  display: flex;
+  animation: scrolling 60s linear infinite;
+  font-size: 14px;
+}
+.marqueeItem {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 0 0 16vw;
+  margin: 0 1vw;
+  padding-bottom: 48px;
+}
+.marqueeItem img {
+  display: block;
+  width: 80%;
+}
+
+.marqueeItem div {
+  font-size: 20px;
+}
+
+@keyframes scrolling {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translatex(-108vw);
+  }
+}
+.marqueeContent:hover {
+  -webkit-animation-play-state: paused;
+  -moz-animation-play-state: paused;
+  -o-animation-play-state: paused;
+  animation-play-state: paused;
+  cursor: pointer;
+}
+.marqueeLink {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: -200px;
+}
+.marqueeLink:link,
+.marqueeLink:visited,
+.marqueeLink:hover,
+.marqueeLink:active {
+  color: #f9f9f9;
+  text-decoration: none;
+  font-size: 2rem;
+}
+.fs {
+  min-height: 960px;
+  padding: 80px 156px;
+  background: url(/images/landing_page/fs1.png);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  display: flex;
+  align-items: center;
+}
+.fstext {
+  font-size: 67px;
+  text-align: left;
+  margin-top: 256px;
+  color: #f9f9f9;
+}
+
+.imgContainer {
+  position: relative;
+  height: 500px;
+  width: 700px;
+  perspective: 500px;
+  transform-style: preserve-3d;
+}
+.inclassbox {
+  box-shadow: 0 0 5px #140f2a;
+  width: 600px;
+  height: 440px;
+  border-radius: 5px;
+  overflow: hidden;
+  /* border: 1px solid #bbb; */
+  position: absolute;
+  top: 50%;
+  transition: 800ms ease-in-out;
+}
+
+.inclassbox img {
+  width: 100%;
+  height: 100%;
+}
+
+.inclassbox:first-of-type {
+  z-index: 5;
+  opacity: 0;
+  left: 15%;
+  transform: translate(-50%, -50%) rotateY(-10deg);
+}
+
+.inclassbox:nth-of-type(2) {
+  opacity: 1;
+  left: 20%;
+  transform: translate(-50%, -50%) rotateY(-10deg);
+  z-index: 5;
+}
+.inclassbox:nth-of-type(3) {
+  left: 25%;
+  opacity: 0.75;
+  color: #eee;
+  z-index: 10;
+  transform: translate(-50%, -50%) rotateY(-10deg) translateZ(-50px);
+}
+
+.inclassbox:nth-of-type(4) {
+  z-index: 5;
+  opacity: 0.5;
+  left: 30%;
+  transform: translate(-50%, -50%) rotateY(-10deg) translateZ(-100px);
+}
+.inclassbox:nth-of-type(5) {
+  z-index: 2;
+  opacity: 0.25;
+  left: 35%;
+  transform: translate(-50%, -50%) rotateY(-10deg) translateZ(-150px);
+}
+
+.btnMarquee {
+  margin: 1.2rem;
+  padding: 0.5rem;
+  font-weight: 600;
+  border: none;
+  overflow: hidden;
+  transition: 0.3s;
+  border-radius: 50px;
+  outline-offset: 0.3rem;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+.btnMarquee a:link,
+.btnMarquee a:visited,
+.btnMarquee a:hover,
+.btnMarquee a:active,
+.CAul li a {
+  color: #140f2a;
+  text-decoration: none;
+}
+.btnMarquee:hover {
+  transform: scale(1.1);
+}
+
+.btnMarquee span {
+  display: block;
+  padding: 0 20px;
+  animation: move-left 5s linear infinite;
+}
+.btnMarquee span::after {
+  position: absolute;
+  content: attr(data-text);
+  top: 0;
+  left: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+@keyframes move-left {
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+.mapSection {
+  width: 100%;
+  height: auto;
+  background-image: url('/images/landing_page/map-bg-blur.webp');
+  /* z-index: -1; */
+  display: flex;
+  flex-direction: row;
+}
+
+.mapInfo {
+  /* position: relative; */
+  font-size: 24px;
+  left: 0%;
+  width: 50%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.mapContainer {
+  width: 100%;
+  height: 100vh;
+}
+
+.logoText {
+  font-size: 44px;
+  font-family: 'Black Ops One', cursive;
+  line-height: 44px;
+  align-items: center;
+  margin-right: 10px;
+}
+
+.logoTextCh {
+  font-size: 44px;
+}
+
+.titleText {
+  font-size: 40px;
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: row;
+  line-height: 44px;
+  align-self: center;
+  justify-content: center;
+  margin: 25px 0px;
+  cursor: pointer;
+}
+.titleText2 {
+  font-size: 40px;
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: row;
+  line-height: 44px;
+  align-self: center;
+  justify-content: center;
+  margin-top: 100px;
+}
+
+.mapTextContainer {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.mapText {
+  cursor: pointer;
+  margin-bottom: 15px;
+  width: 16ch;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
+.locationContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.mapImg {
+  margin-right: 15px;
+}
+
+/* .CAbody {
+  min-height: 880px;
+  margin: 0;
+} */
+.CAcard {
+  margin: 255px auto;
+  height: 350px;
+  width: 600px;
+  background-color: #f9f9f966;
+  backdrop-filter: blur(5px);
+  border-radius: 5px;
+  box-shadow: 0 0 10px #f9f9f977 inset, 0px 0px 5px 3px #f9f9f944;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.CAul {
+  margin: 16px 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.CAul li {
+  list-style: none;
+  margin: 0 15px;
+}
+
+.CAul li a {
+  position: relative;
+  display: block;
+  width: 60px;
+  height: 60px;
+  text-align: center;
+  line-height: 63px;
+  background: #f9f9f966;
+  border-radius: 50%;
+  font-size: 30px;
+  color: #f9f9f9;
+  transition: 0.5s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.CAul li a::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  /* background: #00f0ff; */
+  transition: 0.5s;
+  /* transform: scale(0.9); */
+  z-index: -1;
+}
+/* .CAul .CAli a::before {
+  background: #ff00b8;
+} */
+.CAul li a:hover::before {
+  transform: scale(1.1);
+  box-shadow: 0 0 20px #00f0ff;
+}
+.CAul .CAli a:hover::before {
+  box-shadow: 0 0 20px #ff00b8;
+}
+
+.CAul li a:hover {
+  color: #00f0ff;
+  box-shadow: 0 0 5px #00f0ff;
+  text-shadow: 0 0 5px #00f0ff;
+}
+.CAul .CAli a:hover {
+  color: #ff00b8;
+  box-shadow: 0 0 5px #ff00b8;
+  text-shadow: 0 0 5px #ff00b8;
+}
+.map1 {
+  display: none;
+}
+.map2 {
+  display: block;
+  width: 50%;
+  height: 100vh;
+}
+@media screen and (max-width: 1350px) {
+  .ocs {
+    min-height: 667px;
+  }
+  .ostext {
+    font-size: 32px;
+    margin: 30px 0;
+  }
+
+  .marqueeLink:link,
+  .marqueeLink:visited,
+  .marqueeLink:hover,
+  .marqueeLink:active {
+    font-size: 12px;
+  }
+  .marqueeContent {
+    animation: scrolling 30s linear infinite;
+  }
+  .marquee {
+    margin-top: 32px;
+  }
+  .marqueeItem {
+    flex: 0 0 45vw;
+    margin: 0 0.1vw;
+  }
+  @keyframes scrolling {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translatex(-271.2vw);
+    }
+  }
+  .fs {
+    display: block;
+    padding: 32px 16px;
+    min-height: 667px;
+  }
+  .fstext {
+    font-size: 32px;
+    margin: 0;
+  }
+  .CAcard {
+    margin: auto;
+    height: 200px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .CAbody {
+    min-height: 667px;
+    margin: 0;
+    padding: 32px 16px;
+  }
+  .cardGroup {
+    height: 300px;
+    padding: 12px;
+    width: 300px;
+    overflow: auto;
+    justify-content: start;
+  }
+  .onlineCardImg {
+    height: 120px;
+    width: 150px;
+  }
+  /* .cardshadow:hover .classCard .onlineCardImg {
+    background-position: 5px center;
+  } */
+  .btnMarquee {
+    font-size: 12px;
+    margin: 12px;
+    outline-offset: 0.15rem;
+  }
+  .os {
+    min-height: 767px;
+  }
+  .classCard {
+    width: 200px;
+    height: 250px;
+  }
+  .locationContainer {
+    flex-direction: column;
+  }
+  .classname {
+    font-size: 28px;
+  }
+  .mapSection {
+    flex-direction: column;
+  }
+  .mapInfo {
+    width: 100%;
+  }
+  .map1 {
+    display: block;
+    width: 100%;
+    height: 300px;
+  }
+  .mapContainer {
+    width: 100%;
+    height: 100%;
+  }
+  .map2 {
+    display: none;
+  }
+  .titleText {
+    flex-direction: column;
+  }
+  .mapText {
+    font-size: 16px;
+    margin-bottom: 8px;
+  }
+  .CAul li a {
+    height: 32px;
+    width: 32px;
+  }
+  .CAul {
+    margin-bottom: 32px;
+  }
+  .titleText2 {
+    margin-top: 52px;
+  }
+  .mapTextContainer2 {
+    display: flex;
+    margin: 24px 0;
+  }
+  .logoTextCh {
+    font-size: 32px;
+  }
+  .mapImg {
+    margin-right: 4px;
+    height: 80%;
+  }
+}

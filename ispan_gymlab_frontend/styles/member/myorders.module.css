@@ -1,0 +1,25 @@
+.orderdata {
+  display: flex;
+  padding: 16px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  align-self: stretch;
+}
+.orderdatalist {
+  display: flex;
+  width: 100%;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 28px;
+}
+.orderdatatext {
+  color: #140f2a;
+  text-align: right;
+  width: 50%;
+}
+.orderdatatext2 {
+  color: #140f2a;
+  width: 50%;
+}

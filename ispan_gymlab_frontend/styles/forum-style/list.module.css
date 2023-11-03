@@ -1,0 +1,26 @@
+.ap {
+    border: 2px solid red;
+}
+.txt{
+    color: white;
+    width: 300px;
+    /* height: 100%; */
+    /* padding-top: 10px; */
+}
+.series {
+    font-size:24px;
+    color: white;
+}
+.icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: 100px;
+    /* color: black; */
+}
+.search {
+    width: 400px;
+    margin-right: 50px;
+    margin-top: 10px;
+    background: bisque;
+}

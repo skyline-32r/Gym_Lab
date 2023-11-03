@@ -1,0 +1,16 @@
+.customLink {
+    color: white;
+  }
+  /* .customLink:hover {
+    color: red;
+  } */
+  .customLink:active {
+    background-color: rgba(255, 255, 255, 0.315);
+  }
+  .customLink:focus {
+    /* color: purple; */
+    color: unset;
+  }
+  .customLink:visited {
+    color: white;
+  }

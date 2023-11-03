@@ -1,0 +1,10 @@
+.CardsContainer{
+display: flex;
+justify-content: space-between;
+}
+
+.typesetting{
+    display:flex;
+    flex-direction: column;
+    gap:120px;
+}

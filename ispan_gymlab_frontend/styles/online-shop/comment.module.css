@@ -1,0 +1,73 @@
+.commentCard{
+    background-color: #0F172A;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    color: #f9f9f9;
+}
+
+/* -------------------------------------------- */
+
+.bkSlider {
+    position: relative;
+    width: 100%;
+    height: 70%;
+    padding: 30px 156px;
+    background-color: #0F172A;
+  }
+
+.commentContainer{
+    /* padding: 0px 50px; */
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 60px;
+    justify-content: center;
+    align-items: center;
+}
+
+.title{
+    font-size: 24px;
+    color: #0F172A;
+    margin-right: 20px;
+}
+
+.sec1{
+    /* display: flex; */
+    flex-direction: row;
+    /* justify-content: flex-start; */
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.stars {
+    font-size: 32px;
+    color: gold;
+}
+
+.rate {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+.comment{
+    font-size: 18px;
+    color: #f9f9f9;
+}
+
+.memberContainer{
+    display: flex;
+    flex-direction: row;
+    margin-top: 30px;
+}
+
+.member{
+    font-size: 18px;
+    font-weight: 500;
+    color: #f9f9f9;
+}
+

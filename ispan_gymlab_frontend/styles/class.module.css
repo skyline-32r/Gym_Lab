@@ -1,0 +1,470 @@
+/* //!主頁CSS */
+@media (max-width: 1920px) {
+  .hero {
+    position: relative;
+    height: 800px;
+    width: 100%;
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+    color: #000;
+  }
+
+  .hero::before {
+    content: '';
+    background-image: url(/Images/in-person-classes/121212.jpeg);
+    background-size: cover;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    opacity: 0.8;
+    color: #000;
+  }
+
+  .bgi {
+    /* background-image: "url('../images/in-person-classes/01.jpg')"; */
+    width: 100%;
+    height: 800px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background-image: url(/images/in-person-classes/02.jpg);
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    display: inline-flex;
+  }
+
+  .classes {
+    /* 實體課程的字 */
+    text-align: center;
+    color: #fffffe;
+    font-size: 64px;
+    align-content: center;
+    justify-content: flex-start;
+    /* font-family: Acme; */
+    font-weight: 400;
+    word-wrap: break-word;
+    margin-top: 250px;
+  }
+  .classesS {
+    /* 加入VVIP會員即可免費參加 */
+    color: white;
+    font-size: 24px;
+    font-family: Acme;
+    font-weight: 400;
+    word-wrap: break-word;
+    align-content: center;
+    justify-content: flex-start;
+  }
+  .btnStyle {
+    height: 40px;
+    display: flex;
+    padding: 12px 16px;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    border-radius: 5px;
+    border: 2px solid #fff;
+    background: #140f2a;
+    color: #fff;
+    transition: 0.2s;
+    min-width: 100px;
+  }
+
+  .btnStyle:hover {
+    box-shadow: -4px -4px 0px 0px #00f0ff, 4px 4px 0px 0px #ff00b8;
+    background: #241b4b;
+    cursor: pointer;
+  }
+  .bgc {
+    width: 100%;
+    height: 100%;
+    /* background-color: #182239; */
+    /* background-image: url("https://www.transparenttextures.com/patterns/dark-wood.png"); */
+    background-attachment: fixed;
+    background-color: #140f2a;
+    background-image: url('https://www.transparenttextures.com/patterns/snow.png');
+  }
+
+  .classesHome {
+    margin-top: 100px;
+    height: 500px;
+    justify-content: center;
+    border-radius: 5px;
+    position: relative;
+    width: 100%;
+    display: flex;
+    gap: 30px;
+    margin-bottom: 100px;
+  }
+  .classesCard {
+    width: 450px;
+    height: 500px;
+    border-radius: 5px;
+    border: 4px solid transparent;
+    background-clip: padding-box, border-box;
+    background-origin: padding-box, border-box;
+    background-image: linear-gradient(to right, #140f2a, #140f2a),
+      linear-gradient(-10deg, #00f0ff, #ff00b8);
+  }
+  .classesTitle {
+    font-size: 42px;
+    color: #fff;
+    text-align: center;
+    /* margin-top: 150px; */
+    padding-top: 20px;
+    /* padding-top: 150px; */
+  }
+  .instructorHome {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 50px 156px;
+    justify-content: center;
+    /* max-width: 1400px; */
+    color: #000;
+  }
+  .instructor {
+    width: 152px;
+    height: 200px;
+    margin: 20px 60px;
+    background-color: unset;
+    transition: transform 0.2s ease-in-out;
+    /* cursor: wait; */
+    /* pointer */
+    color: #000;
+    position: relative;
+  }
+  .instructor:hover {
+    transform: scale(1.1);
+    /* box-shadow: 0 0 300px white; */
+    /* cursor: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/28963/cockroach%20(2).ico'); */
+    /* cursor: url('/images/in-person-classes/001.ico'), pointer; ! 臉喔注意!!! */
+    color: #000;
+  }
+
+  /* .Avatar:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 300px white;
+  } */
+  .instructorName {
+    font-size: 20px;
+    justify-content: center;
+    margin-top: 5px;
+    text-align: center;
+    color: #000;
+  }
+
+  .photoHome {
+    display: flex;
+    justify-content: center;
+    margin: 50px 156px;
+  }
+  .photoDiv {
+    margin: 100px 10px;
+    width: 300px;
+    height: 300px;
+    border: #000;
+  }
+  .scheduleHome {
+    color: #fff;
+    border: 4px solid transparent;
+    background-clip: padding-box, border-box;
+    background-origin: padding-box, border-box;
+    background-image: linear-gradient(to right, #140f2a, #140f2a),
+      linear-gradient(-10deg, #00f0ff, #ff00b8);
+    width: 50%;
+    padding: 20px 50px;
+    margin: 20px auto; /* 置中 */
+  }
+  .scheduleTr {
+    display: flex;
+    padding-bottom: 10px;
+    padding-top: 20px;
+    justify-content: space-between;
+    align-items: center;
+    align-self: stretch;
+
+    /* border-bottom: 2px solid #ff00b8; */
+  }
+  .bb {
+    background-image: linear-gradient(-10deg, #00f0ff, #ff00b8);
+    height: 2px;
+  }
+  .scheduleInstructors {
+    border-radius: 3px;
+    background: #000;
+    border: 1px solid #fff;
+    /* border-bottom: none; */
+    color: #fff;
+    margin: 2px;
+    /* margin-top: 5px; */
+  }
+  .schedulebtn {
+    border-radius: 3px;
+    border: 1px solid #fff;
+    border-color: #c8fcff #e177d9;
+    background: linear-gradient(
+      94deg,
+      #c8fcff 11.14%,
+      #c2c0ee 61.37%,
+      #e177d9 71.53%,
+      #ff99e2 100.43%
+    );
+    margin: 2px;
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 414px) {
+  .classesHome {
+    margin-top: 100px;
+    height: 100%;
+    justify-content: center;
+    border-radius: 5px;
+    position: relative;
+
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .classesTitle {
+    font-size: 20px;
+    color: #fff;
+    text-align: center;
+    padding-top: 100px;
+  }
+  .bgc {
+    height: 100%;
+    background-attachment: fixed;
+    background-color: #140f2a;
+    background-image: url('https://www.transparenttextures.com/patterns/snow.png');
+  }
+  .hero {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+  }
+
+  .hero::before {
+    content: '';
+    background-image: url(/Images/in-person-classes/121212.jpeg);
+    background-size: cover;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    opacity: 0.3;
+  }
+  .scheduleTr {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .mobile-style {
+    width: 80%;
+    color: #fff;
+    border: 4px solid transparent;
+
+    /* padding: 0 10px; */
+    /* margin: 50px auto; */
+    background-clip: padding-box, border-box;
+    background-origin: padding-box, border-box;
+    background-image: linear-gradient(to right, #140f2a, #140f2a),
+      linear-gradient(-10deg, #00f0ff, #ff00b8);
+  }
+
+  .day {
+    color: gray;
+  }
+  .day:hover {
+    color: white;
+  }
+  #app {
+    height: 100%;
+  }
+  .swiperPhoto {
+    width: 100%;
+    height: 100%;
+    margin: 20;
+  }
+  .swiper {
+    width: 100%;
+    height: 100%;
+  }
+
+  .instructorName {
+    font-size: 20px;
+    justify-content: center;
+    margin-top: 5px;
+    text-align: center;
+    color: #fff;
+  }
+}
+/*! index頁面課程照片輪播 */
+
+#app {
+  height: 100%;
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+
+  /* Center slide text vertically */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* //!主頁CSS結束 */
+
+/* //!教練主頁CSS開始 */
+.bgiInstructor {
+  /* background-image: "url('../images/in-person-classes/01.jpg')"; */
+  width: 100%;
+  height: 1000px;
+
+  background-image: url('/images/in-person-classes/instructor/background2.png');
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  display: inline-flex;
+}
+.bgcInstructor {
+  width: 100%;
+  height: 3000px;
+  background: linear-gradient(
+    0deg,
+    rgba(20, 15, 42, 0.47) 0%,
+    rgba(20, 15, 42, 0.47) 100%
+  );
+}
+.instructorNameL {
+  font-size: 52px;
+  /* justify-content: center; */
+  margin-top: 5px;
+  text-align: center;
+  color: #fff;
+}
+.instructorHomeL {
+  margin: 50px 100px 50px 0px;
+}
+.line {
+  width: 1128px;
+  height: 4px;
+}
+.bgiInstructor2 {
+  background-image: url('/images/in-person-classes/instructor/bgc.jpg');
+  width: 100%;
+  height: 700px;
+  background-repeat: no-repeat;
+  /* background-attachment: fixed; */
+  background-position: center;
+  background-size: cover;
+  padding-top: '30px';
+}
+/*! bar-start */
+.sub {
+  width: 100%;
+  height: 64px;
+  background-color: lightgray;
+  padding-left: 156px;
+  padding-right: 156px;
+  position: fixed;
+  top: 64px;
+  z-index: 3;
+  /* position: sticky; */
+}
+
+.subButton {
+  color: black;
+}
+
+.subButton:hover {
+  color: #ff00b8;
+}
+.aa {
+  text-decoration: none;
+  color: black;
+}
+.aa:hover {
+  text-decoration: none;
+  color: #ff00b8;
+}
+.toolBar {
+  justify-content: center;
+}
+
+/*! bar-end */
+
+/*! glass */
+
+.glass {
+  box-sizing: border-box;
+  height: 100%;
+  width: 100%;
+  background-image: url('/Images/in-person-classes/22.png');
+  background-size: cover;
+  background-position: center;
+  clip-path: inset(10em);
+  filter: blur(10px);
+  /* backdrop-filter: blur(10px); */
+  /* filter: opacity(0.1); */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.shadow {
+  height: 100%;
+  width: 100%;
+  filter: drop-shadow(0px 20px 10px rgba(0, 0, 0, 0.3));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.shadow:before {
+  display: block;
+  content: '';
+  position: absolute;
+  top: 10em;
+  height: calc(100% - 20em);
+  width: calc(100% - 20em);
+  border-top: 2px solid rgba(225, 225, 225, 0.2);
+  border-left: 1px solid rgba(225, 225, 225, 0.1);
+  border-right: 1px solid rgba(225, 225, 225, 0.3);
+  z-index: 2;
+  filter: blur(1px);
+}
+
+.glassclass {
+  /* position: absolute; */
+  z-index: 3;
+  color: white;
+  /* font-size: 4em; */
+  /* letter-spacing: 0.75em; */
+  /* padding-left: 0.375em; */
+}
+
+.glassContainer {
+  backdrop-filter: blur(10px);
+}

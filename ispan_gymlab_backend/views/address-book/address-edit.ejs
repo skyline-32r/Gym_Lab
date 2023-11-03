@@ -1,0 +1,148 @@
+<%- include("../parts/html-head") %> <%- include("../parts/navbar") %>
+<style>
+  form input.form-control {
+    border: 1px solid #cccccc;
+  }
+  form .form-text {
+    display: none;
+  }
+
+  form .warning input.form-control {
+    border: 2px solid red;
+  }
+  form .warning .form-text {
+    display: block;
+    color: red;
+  }
+</style>
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <div class="card" style="width: 18rem">
+        <div class="card-body">
+          <h5 class="card-title">新增資料</h5>
+          <form name="form1" onsubmit="postForm(event)">
+            <input type="hidden" name="sid" value="<%= sid %>" />
+            <div class="mb-3">
+              <label for="exampleInputname1" class="form-label">姓名</label>
+              <input
+                type="text"
+                class="form-control"
+                id="exampleInputname1"
+                name="name"
+                value="<%=name%>"
+              />
+              <div class="form-text"></div>
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">郵件</label>
+              <input
+                type="email"
+                class="form-control"
+                id="exampleInputEmail1"
+                name="email"
+                value="<%= email%>"
+              />
+              <div class="form-text"></div>
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputmobile1" class="form-label">電話</label>
+              <input
+                type="text"
+                class="form-control"
+                id="exampleInputmobile1"
+                name="mobile"
+                value="<%mobile%>"
+              />
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputbirthday1" class="form-label">生日</label>
+              <input
+                type="date"
+                class="form-control"
+                id="exampleInputbirthday1"
+                name="birthday"
+                value="<%birthday%>"
+              />
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputaddress1" class="form-label">地址</label>
+              <!-- <input
+                type="text"
+                class="form-control"
+                id="exampleInputaddress1"
+                name="address"
+                value="<%address%>"
+              /> -->
+              <textarea
+                type="text"
+                class="form-control"
+                id="exampleInputaddress1"
+                name="address"
+              >
+<%=address%></textarea
+              >
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<%- include("../parts/scripts") %>
+<script>
+  const nameInput = document.querySelector("#exampleInputname1");
+  const emailInput = document.querySelector("#exampleInputEmail1");
+  const emailRegex =
+    /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  function postForm(e) {
+    e.preventDefault();
+    // action="/address-book/api" method="post"
+    const fd = new FormData(document.form1);
+    const usp = new URLSearchParams(fd);
+
+    let isPass = true;
+
+    if (nameInput.value.length < 2) {
+      isPass = false;
+      nameInput.closest("div").classList.toggle("warning");
+      let warningDiv = nameInput.nextElementSibling;
+      warningDiv.innerHTML = "請輸入完整的姓名";
+    }
+    if (!emailRegex.test(emailInput.value)) {
+      isPass = false;
+      emailInput.closest("div").classList.toggle("warning");
+      let warningDiv = emailInput.nextElementSibling;
+      warningDiv.innerHTML = "請輸入郵件";
+    }
+    if (isPass) {
+      fetch("/address-book/api<%= sid%>", {
+        method: "PUT",
+        body: usp.toString(),
+        headers: {
+          "Content-Type": "application/x-www-form-urlencoded",
+        },
+      })
+        .then((res) => res.json())
+        .then((obj) => {
+          console.log(obj);
+          if (obj.success) {
+            alert("資料修改成功");
+          } else if (!obj.error) {
+            alert("資料沒有修改");
+          } else {
+            for (let s in obj.errors) {
+              if (document.form1[s] && document.form1[s] instanceof Element) {
+                const el = document.form1[s];
+                el.closest("div").classList.add("warning");
+                el.nextElementSibling.innerHTML = obj.errors[s];
+              }
+            }
+          }
+        })
+        .catch((ex) => console.log(ex));
+    }
+  }
+</script>
+<%- include("../parts/html-footer") %>

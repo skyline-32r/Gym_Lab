@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <form>
+    <input type="file" name="avatar" accept="image/*" multiple>
+  </form>
+
+  <script>
+    const f = document.querySelector('input[type=file]');
+
+    f.addEventListener('change', event=>{
+      // FileList, File
+      console.log(f.files)
+      console.log(f.files[0])
+    })
+
+  </script>
+</body>
+</html>

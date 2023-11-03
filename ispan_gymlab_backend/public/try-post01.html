@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <input type="text" id="nickname" placeholder="暱稱">
+  <br>
+  <input type="text" id="content" placeholder="留言內容">
+  <br>
+  <button onclick="sendData()">送出</button>
+  <br>
+  <pre id="info"></pre>
+
+
+  <script>
+    function sendData() {
+      const dataObj = {
+        nickname: document.querySelector('#nickname').value,
+        content: document.querySelector('#content').value,
+      };
+
+      fetch('/try-post', {
+        method: 'POST',
+        body: JSON.stringify(dataObj),
+        headers: {
+          'Content-Type': 'application/json'
+        }
+      }).then(r => r.json())
+        .then(data => {
+          info.innerHTML = JSON.stringify(data, null, 4)
+        })
+        .catch(ex => console.log(ex))
+    }
+
+
+  </script>
+
+
+</body>
+
+</html>

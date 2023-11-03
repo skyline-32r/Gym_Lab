@@ -1,0 +1,19 @@
+.formtitle {
+    background: white;
+    padding-top: 30px;
+}
+.cate {
+    /* width: 945px; */
+    /* margin-left: 488px; */
+    margin-top: 50px;
+    /* padding-top: 10px; */
+    /* gap: 500px; */
+    background: white;
+}
+.abc{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    /* justify-content: flex-start; */
+    /* width: 100px; */
+}

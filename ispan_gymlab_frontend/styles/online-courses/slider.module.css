@@ -1,0 +1,12 @@
+.swiperBackground {
+  padding: 48px 36px;
+  background: linear-gradient(
+    0deg,
+    #cbd6ef -1.55%,
+    rgba(203, 214, 239, 0.37) 93.99%,
+    rgba(203, 214, 239, 0) 104.3%
+  );
+  box-shadow: 16px 16px 40px 0px #373a40 inset,
+    -10px -10px 40px 0px #d1defa inset;
+  width: 100%;
+}

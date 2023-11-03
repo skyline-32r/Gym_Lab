@@ -1,0 +1,22 @@
+.ocBtnStyle {
+  height: 40px;
+  display: flex;
+  padding: 12px 16px;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  border-radius: 0px;
+  border: 2px solid #fff;
+  background: #140f2a;
+  color: #fff;
+  transition: 0.2s;
+  min-width: 100px;
+  font-size: 23px;
+  width: 100%;
+}
+
+.ocBtnStyle:hover {
+  box-shadow: -4px -4px 0px 0px #00f0ff, 4px 4px 0px 0px #ff00b8;
+  background: #241b4b;
+  cursor: pointer;
+}

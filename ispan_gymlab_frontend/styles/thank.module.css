@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap');
+
+.bo {
+  height: 930px;
+  background: radial-gradient(30% 70% at 50% 50%, #3d375a 0%, #140f2a 100%);
+  overflow: hidden;
+  overflow: -moz-hidden-unscrollable;
+  font: 300 30px/1 '微軟正黑體', sans-serif;
+  position: relative;
+  z-index: 0;
+}
+
+.wrapper {
+  position: absolute;
+  top: 100%;
+  left: calc(50% - 450px);
+  width: 900px;
+  text-align: center;
+  /*   text-transform: uppercase; */
+  color: #fff;
+  animation: 60s credits linear infinite;
+}
+
+.movie {
+  margin-bottom: 50px;
+  font-size: 50px;
+  font-family: Black Ops One, '微軟正黑體';
+}
+
+.job {
+  margin-bottom: 12px;
+  font-size: 18px;
+  color: #ff00b8;
+}
+.s {
+  font-size: 18px;
+}
+.name {
+  margin-bottom: 12px;
+  font-size: 28px;
+}
+.name2 {
+  font-size: 28px;
+  margin-bottom: 50px;
+}
+
+@keyframes credits {
+  0% {
+    top: 100%;
+  }
+  100% {
+    top: -300%;
+  }
+}
+.b {
+  color: #00f0ff;
+}
+.w {
+  color: #f9f9f9;
+}
+.p {
+  color: #ff00b8;
+}
+.wrapper .name:nth-child(odd) {
+  color: #00f0ff;
+}
+.wrapper .name:nth-child(even) {
+  color: #ff00b8;
+}
+.logo2 {
+  display: none;
+}
+@media screen and (max-width: 1350px) {
+  .bo {
+    height: 667px;
+    background: radial-gradient(60% 40% at 50% 50%, #3d375a 0%, #140f2a 100%);
+  }
+  .movie {
+    font-size: 32px;
+  }
+  .job {
+    font-size: 12px;
+  }
+  .name {
+    font-size: 18px;
+  }
+  .name2 {
+    font-size: 18px;
+  }
+  .s {
+    font-size: 12px;
+  }
+  .wrapper {
+    position: absolute;
+    top: 100%;
+    left: calc(50% - 175px);
+    width: 350px;
+  }
+  .logo2 {
+    display: block;
+  }
+  .logo1 {
+    display: none;
+  }
+}

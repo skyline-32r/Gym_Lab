@@ -1,0 +1,50 @@
+GET http://localhost:3003/posts
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJpYXQiOjE2OTcxNzE1MzZ9.ariE9mooMLA_B_vmyvR9OsMhjayfUg4nFKpLHx4hFOo
+###
+
+POST http://localhost:3003/login
+Content-Type: application/json
+
+###
+
+POST http://localhost:3002/member/login
+Content-Type: application/json
+
+{
+  "email": "ispan@gmail.com",
+  "password": "team1"
+}GET http://localhost:3003/posts
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiSmltIiwiaWF0IjoxNjk3MDQ3MzY0fQ.g8Nm6noITMj-aT7TY1OIkTBYPtF4Wbt84danSv-V7I4
+
+###
+
+POST http://localhost:3003/login
+Content-Type: application/json
+
+{
+  "username": "Jim"
+}
+
+###
+
+GET http://localhost:3002/online-courses/2
+
+###
+
+POST http://localhost:3002/online-courses/2/addToCart
+Content-Type: application/json
+
+{
+  "user_id": "999"
+}
+
+###
+
+POST http://localhost:3002/online-courses/my-online-courses/999
+Content-Type: application/json
+
+{
+  "courseRating": "3",
+  "review" : "Just testing things",
+  "course_id": "2"
+}

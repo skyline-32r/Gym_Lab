@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        .container {
+            display: flex;
+        }
+
+        .card {
+            width: 200px;
+        }
+
+        .card img {
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <form name="form1" onsubmit="return false" hidden>
+        <input type="file" name="photos" accept="image/*" multiple />
+        <!-- <input type="submit" /> -->
+    </form>
+    <div class="container">
+        <a href="javascript: " onclick="document.form1.photos.click()">加鏈接</a>
+        <!--
+      <div class="card" >
+        <img src="img/348a3e92-9497-464b-a969-9e3cda68ee2b.png" alt="">
+      </div>
+      -->
+
+    </div>
+
+    <script>
+        document.form1.photos.addEventListener("change", function () {
+            const fd = new FormData(document.form1);
+
+            fetch("/try-uploads", {
+                method: "POST",
+                body: fd,
+            })
+                .then((r) => r.json())
+                .then((data) => {
+                    document.querySelector('.container').innerHTML = data.map(item => {
+                        return `
+              <div class="card" >
+                <img src="img/${item.filename}" alt="">
+              </div>
+              `
+                    }).join('')
+                })
+                .catch((ex) => console.log(ex));
+        })
+    </script>
+</body>
+
+</html>

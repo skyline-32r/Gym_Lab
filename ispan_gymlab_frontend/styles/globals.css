@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap');
+
+* {
+  box-sizing: border-box;
+  font-family: 微軟正黑體;
+  font-weight: 400;
+}
+html {
+  /* height: 100%; */
+  scroll-behavior: smooth;
+  scroll-padding: 140px 0 0 0;
+  /*! 周加ㄉ */
+}
+body {
+  /* font-family: 'Blinker', sans-serif; */
+  margin: 0;
+  padding: 0;
+  color: white;
+  /* height: 100%; */
+}
+
+/* .map-section{
+  max-width: 100%;
+  height: auto;
+  background-image: url('/images/landing_page/map-bg.webp');
+  z-index: -1;
+}
+.map-info {
+  position: relative;
+  left: 0%;
+  width: 50%;
+  height: 100vh;
+}
+
+.map-container {
+  position: relative;
+  left: 50%;
+  width: 50%;
+  height: 100vh;
+} */
+
+.MuiPaper-root.MuiPopover-paper.MuiMenu-paper {
+  border-radius: unset;
+}
+
+.navBotton {
+  font-size: 16px;
+  color: #f9f9f9;
+  text-decoration: none;
+}
+/* 敏1013新增 */
+
+.navBotton {
+  font-size: 16px;
+}
+
+.navBotton:hover {
+  color: rgba(0, 240, 255, 1);
+}
+
+.footer {
+  display: flex;
+  width: 100%;
+  padding: 20px 0px 10px 0px;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  align-self: stretch;
+  background-color: #0f172a;
+}
+
+.footertext {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  color: #f9f9f9;
+  font-family: '微軟正黑體';
+  margin-right: 20px;
+  cursor: pointer;
+}
+
+.footertext:hover {
+  color: #00f0ff;
+}
+
+.textgroup {
+  display: flex;
+  padding: 0px 32px;
+  justify-content: center;
+  align-items: center;
+  gap: 23px;
+  align-self: stretch;
+  padding: 0px 156px;
+}
+
+.line {
+  height: 0.5px;
+  width: 100%;
+  background: #ff00b8;
+  margin-top: 10px;
+}
+
+.icon {
+  color: #f9f9f9;
+  padding-right: 20px;
+}
+
+.text {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.textname {
+  color: #ff00b8;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  font-family: 'Black Ops One', cursive;
+  padding-right: 10px;
+}
+
+.textsince {
+  color: #00f0ff;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  font-family: '微軟正黑體';
+}
+
+.sticky {
+  position: sticky;
+  bottom: 0;
+}
+/*! googleMap */
+.map-container {
+  border-radius: 15px;
+  overflow: hidden;
+  width: 75%;
+}
