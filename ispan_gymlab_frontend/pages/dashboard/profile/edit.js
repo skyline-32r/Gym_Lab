@@ -374,7 +374,7 @@ export default function EditInfo() {
                     ),
                   }}
                 ></TextField>
-                {formData.town && (
+                {/* {formData.town && (
                   <HomeArea
                     // errortext1={errors.country}
                     // errortext2={errors.town}
@@ -382,7 +382,7 @@ export default function EditInfo() {
                     value1={formData.country}
                     value2={formData.town}
                   />
-                )}
+                )} */}
                 <TextField
                   sx={{
                     width: '100%',

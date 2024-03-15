@@ -34,7 +34,7 @@ import { useRouter } from 'next/router'
 export default function Info() {
   // const storageData =
   //   typeof window !== 'undefined' ? localStorage.getItem(localKey) : null
- const router = useRouter()
+  const router = useRouter()
   const { auth, setAuth } = useContext(AuthContext)
 
   const [gender, setGender] = useState('')
@@ -311,7 +311,7 @@ export default function Info() {
                 ></TextField>
                 {console.log(formData.country)}
                 {console.log(formData.town)}
-                {formData?.home_area && country && town && (
+                {/* {formData?.home_area && country && town && (
                   <HomeArea
                     // errortext1={errors.country}
                     // errortext2={errors.town}
@@ -321,7 +321,7 @@ export default function Info() {
                     value1={country}
                     value2={town}
                   />
-                )}
+                )} */}
                 <TextField
                   sx={{
                     width: '100%',
