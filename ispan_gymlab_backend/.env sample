@@ -1,0 +1,13 @@
+DB_HOST = localhost
+DB_USER = root
+DB_PASS =
+DB_NAME = ispan_project_team1
+WEB_PORT = 3002
+JWT_SECRET = itsasecret
+ACCESS_TOKEN_SECRET=itsasecret
+
+# ECPAY_URL=https://payment-stage.ecpay.com.tw/Cashier/AioCheckOut/V5 # 不會用到
+MERCHANTID=2000132
+HASHKEY=5294y06JbISpM5x9
+HASHIV=v77hoKGq4kWxNNIS
+HOST= http://localhost:3000
